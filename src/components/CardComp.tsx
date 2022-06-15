@@ -21,7 +21,7 @@ export const CardComp: React.FC<WrapperProps> = ({ index, rides }) => {
   return (
     <Wrapper variant="large">
       <Box p={5} shadow="md" borderRadius={8} bg="#171717" key={index}>
-        <Flex>
+        <Flex direction={["column", "row", "row", "row"]}>
           <Image
             w="296px"
             h="148px
@@ -29,7 +29,7 @@ export const CardComp: React.FC<WrapperProps> = ({ index, rides }) => {
             borderRadius={5}
             src={rides.map_url}
           />
-          <Flex direction="column" ml={"10"}>
+          <Flex direction="column" ml={["2", "10"]} p={["5", "0"]}>
             <List spacing={2} color="#CFCFCF">
               <ListItem>
                 Ride Id : <span>{rides.id}</span>
